@@ -3,6 +3,7 @@
 public class Test : Gtk.Application {
     private const string CSS = """
 .logo {
+    background-color: @SLATE_300;
     background-image:
         url("/home/cassidyjames/Projects/cassidyjames/os-branding/logomark-white.svg"),
         linear-gradient(to bottom, alpha(@SLATE_500, 0.25), alpha(@SLATE_700, 0.75)),
