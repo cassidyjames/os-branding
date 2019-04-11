@@ -5,9 +5,11 @@ public class Test : Gtk.Application {
         .logo {
             background-image:
                 url("/home/cassidyjames/Projects/cassidyjames/os-branding/logomark-white.svg"),
+                linear-gradient(to bottom, alpha(@BLUEBERRY_100, 0.5), alpha(@BLUEBERRY_500, 0.75)),
                 url("/usr/share/backgrounds/elementaryos-default");
             background-size:
                 contain,
+                cover,
                 cover;
         }
     """;
