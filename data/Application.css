@@ -1,0 +1,12 @@
+.logo {
+    background-color: @SLATE_300;
+    background-image:
+        url("/com/github/cassidyjames/test/logomark-white.svg"),
+        linear-gradient(to bottom, alpha(@SLATE_500, 0.25), alpha(@SLATE_700, 0.75)),
+        url("file:///usr/share/backgrounds/elementaryos-default");
+    background-size:
+        contain,
+        cover,
+        cover;
+}
+

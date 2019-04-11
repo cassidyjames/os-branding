@@ -1,20 +1,4 @@
-// vala ./test.vala --pkg gtk+-3.0 --pkg granite
-
 public class Test : Gtk.Application {
-    private const string CSS = """
-.logo {
-    background-color: @SLATE_300;
-    background-image:
-        url("/home/cassidyjames/Projects/cassidyjames/os-branding/logomark-white.svg"),
-        linear-gradient(to bottom, alpha(@SLATE_500, 0.25), alpha(@SLATE_700, 0.75)),
-        url("/usr/share/backgrounds/elementaryos-default");
-    background-size:
-        contain,
-        cover,
-        cover;
-}
-    """;
-
     public Test () {
         Object(
             application_id: "com.github.cassidyjames.test",
@@ -48,17 +32,13 @@ public class Test : Gtk.Application {
         window.add (grid);
 
         var provider = new Gtk.CssProvider ();
-        try {
-            provider.load_from_data (CSS, CSS.length);
+        provider.load_from_resource ("/com/github/cassidyjames/test/Application.css");
 
-            Gtk.StyleContext.add_provider_for_screen (
-                Gdk.Screen.get_default (),
-                provider,
-                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-            );
-        } catch (GLib.Error e) {
-            critical (e.message);
-        }
+        Gtk.StyleContext.add_provider_for_screen (
+            Gdk.Screen.get_default (),
+            provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+        );
 
         window.show_all ();
     }
