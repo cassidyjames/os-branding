@@ -2,16 +2,16 @@
 
 public class Test : Gtk.Application {
     private const string CSS = """
-        .logo {
-            background-image:
-                url("/home/cassidyjames/Projects/cassidyjames/os-branding/logomark-white.svg"),
-                linear-gradient(to bottom, alpha(@BLUEBERRY_100, 0.5), alpha(@BLUEBERRY_500, 0.75)),
-                url("/usr/share/backgrounds/elementaryos-default");
-            background-size:
-                contain,
-                cover,
-                cover;
-        }
+.logo {
+    background-image:
+        url("/home/cassidyjames/Projects/cassidyjames/os-branding/logomark-white.svg"),
+        linear-gradient(to bottom, alpha(@SLATE_500, 0.25), alpha(@SLATE_700, 0.75)),
+        url("/usr/share/backgrounds/elementaryos-default");
+    background-size:
+        contain,
+        cover,
+        cover;
+}
     """;
 
     public Test () {
